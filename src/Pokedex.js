@@ -15,16 +15,18 @@ function Pokedex({
 }) {
 	return (
 		<div>
-			<h1>Pokedex</h1>
-			{pokemon.map((p) => (
-				<Pokemon
-					key={p.id}
-					id={p.id}
-					name={p.name}
-					type={p.type}
-					base_experience={p.base_experience}
-				/>
-			))}
+			<h1 className="title">Pokedex</h1>
+			<div className="columns is-3 is-multiline">
+				{pokemon.map((p) => (
+					<Pokemon
+						key={p.id}
+						id={p.id}
+						name={p.name}
+						type={p.type}
+						base_experience={p.base_experience}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }
